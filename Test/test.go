@@ -45,5 +45,7 @@ func array_slice() {
 }
 func main() {
 	//fibo_array()
-	array_slice()
+	//array_slice()
+	var str string = "a good boy"
+	fmt.Printf("%c", str[1])
 }
