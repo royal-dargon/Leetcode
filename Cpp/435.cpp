@@ -39,7 +39,7 @@ public:
         int i;
         int n = intervals.size();
         for(i = 1;i < n;i ++) {
-            if(intervals[i][0] >= right) {
+            if(intervals[i][0] >= right) {  
                 right = intervals[i][1];
                 ans ++;
             }
