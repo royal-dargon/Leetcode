@@ -53,7 +53,7 @@ public:
                 j ++;
             }
         }
-        char res1[count];
+        char res1[1000];
         strncpy(res1,res,count);
         string res2 = res1;
         return res2;

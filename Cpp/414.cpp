@@ -24,6 +24,7 @@ public:
         int count = 1;
         int i;
         int lenth = nums.size();
+        //cout<<nums[1]<<endl;
         sort(nums.begin(),nums.end());
         if(lenth < 3){
             return nums[lenth-1];

@@ -1,6 +1,10 @@
 // The API isBadVersion is defined for you.
 // bool isBadVersion(int version);
 
+bool isBadVersion(int n){
+    return true;
+}
+
 class Solution {
 public:
     int firstBadVersion(int n) {
