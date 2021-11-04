@@ -1,3 +1,6 @@
+/*
+本题是一个窗口滑动的形式，滑动时减去末尾增加一个进入窗口的数字
+*/
 #include <string>
 
 using namespace std;
@@ -7,9 +10,12 @@ public:
     bool checkInclusion(string s1, string s2) {
         int lenth1 = s1.size();
         int lenth2 = s2.size();
+        if(lenth1 > lenth2) {
+            return false;
+        }
         int a[26],b[26];
-        memset(a,0,sizeof(int));
-        memset(b,0,sizeof(int));
+        memset(a,0,sizeof(int)*26);
+        memset(b,0,sizeof(int)*26);
         for(int i = 0;i < lenth1;i ++) {
             a[s1[i] - 'a'] ++;
         }
