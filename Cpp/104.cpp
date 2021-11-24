@@ -9,16 +9,16 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
-public:
-    int maxDepth(TreeNode* root) {
-        if(root == nullptr) {
-            return 0;
-        }
-        if(maxDepth(root->left) > maxDepth(root->right)) {
-            return maxDepth(root->left) + 1;
-        } else {
-            return maxDepth(root->right) + 1;
-        }
-    }
-};
+// class Solution {
+// public:
+//     int maxDepth(TreeNode* root) {
+//         if(root == nullptr) {
+//             return 0;
+//         }
+//         if(maxDepth(root->left) > maxDepth(root->right)) {
+//             return maxDepth(root->left) + 1;
+//         } else {
+//             return maxDepth(root->right) + 1;
+//         }
+//     }
+// };
