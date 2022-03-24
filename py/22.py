@@ -23,7 +23,7 @@ class Solution:
         return ans
 
 
-def main():
+def main():tffrg
     n = int(input())
     res = Solution().generaterParenthesis2(n)
     print(res)
