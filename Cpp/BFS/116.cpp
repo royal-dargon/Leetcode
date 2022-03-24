@@ -16,37 +16,37 @@ public:
 };
 */
 
-// class Solution {
-// public:
-//     Node* connect(Node* root) {
-//         if(root == NULL) {
-//             return root;
-//         }
-//         queue<Node*> myList;
-//         int depth = 0;
-//         int temp = 1;
-//         myList.push(root);
-//         while(!myList.empty()) {
-//             if(temp == 0) {
-//                 temp = pow(2,depth);
-//             }
-//             Node *now = myList.front();
-//             if(now->left) {
-//                 myList.push(now->left);
-//             }
-//             if(now->right) {
-//                 myList.push(now->right);
-//             }
-//             myList.pop();
-//             if(temp == 1) {
-//                 now->next = NULL;
-//                 temp --;
-//                 depth ++;
-//             } else {
-//                 now->next = myList.front();
-//                 temp --;
-//             }
-//         }
-//         return root;
-//     }
-// };
+class Solution {
+public:
+    Node* connect(Node* root) {
+        if(root == NULL) {
+            return root;
+        }
+        queue<Node*> myList;
+        int depth = 0;
+        int temp = 1;
+        myList.push(root);
+        while(!myList.empty()) {
+            if(temp == 0) {
+                temp = pow(2,depth);
+            }
+            Node *now = myList.front();
+            if(now->left) {
+                myList.push(now->left);
+            }
+            if(now->right) {
+                myList.push(now->right);
+            }
+            myList.pop();
+            if(temp == 1) {
+                now->next = NULL;
+                temp --;
+                depth ++;
+            } else {
+                now->next = myList.front();
+                temp --;
+            }
+        }
+        return root;
+    }
+};
